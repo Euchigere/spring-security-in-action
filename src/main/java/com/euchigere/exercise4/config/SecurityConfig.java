@@ -26,8 +26,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin()
                 .defaultSuccessUrl("/main", true);
         http.authorizeRequests()
-                .antMatchers("/h2-console/**")
-                .permitAll()
                 .anyRequest().authenticated();
     }
 
