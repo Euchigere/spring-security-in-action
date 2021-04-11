@@ -29,8 +29,7 @@ public class AuthenticationServerProxy {
         rest.postForEntity(url, request, Void.class);
     }
 
-    public boolean sendOTP(String username,
-                           String code) {
+    public boolean sendOTP(String username, String code) {
         String url = baseUrl + "/otp/check";
         var body = new User();
         // The HTTP request body needs the username and the code for this call.
